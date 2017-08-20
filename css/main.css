@@ -680,3 +680,26 @@ td.gutter {
 #social-share-section {
   margin-bottom: 30px;
 }
+
+.center {
+    margin: 0 auto;
+    display: block;
+}
+
+.author-picture {
+  float: left; 
+  width: 220px; 
+  padding: 0px 20px 20px 0;
+}
+
+.author-name h1 {
+  font-size: 20px;
+}
+
+.author-description {
+  padding: 5px;
+}
+
+.author-description p {
+  margin: 0px;
+}

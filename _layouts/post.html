@@ -8,11 +8,15 @@ layout: base
   <div class="row">
     <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
 
-      {% include subscribe.html %}
-
       <article role="main" class="blog-post">
         {{ content }}
       </article>
+
+      {% if page.author %}
+        {% include {{ page.author }} %}
+      {% endif %}
+
+      {% include subscribe.html %}
 
       {% if page.tags.size > 0 %}
         <div class="blog-tags">
