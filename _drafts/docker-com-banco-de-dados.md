@@ -4,6 +4,7 @@ title: Docker, banco de dados e ambiente de desenvolvimento - parte 1
 subtitle: Não instale banco de dados direto no seu computador, use o Docker
 bigimg: /img/posts/2017/docker.png
 tags: [docker, mysql, postgresql]
+author: author-normandes.html
 ---
 
 Quer começar a aprender Docker? Quer melhorar o gerenciamento dos bancos de dados na sua máquina local? Quer ter duas ou mais versões do MySQL ou Postgres instalado no seu computador? 
@@ -48,7 +49,7 @@ Portanto, quando você precisar de alguma aplicação, como no nosso caso, vamos
 
 ### Docker Hub
 
-Tavlez sua próxima pergunta seja, será que existe um repositório onde dá pra pesquisar imagens? E a resposta é sim, é só acessar o [Docker Hub](https://hub.docker.com/){:target="_blank"}. Existem milhares de imagens prontas pra nós usarmos.
+Talvez sua próxima pergunta seja, será que existe um repositório onde dá pra pesquisar imagens? E a resposta é sim, é só acessar o [Docker Hub](https://hub.docker.com/){:target="_blank"}. Existem milhares de imagens prontas pra nós usarmos.
 
 Mas vamos seguir, meu objetivo com esse post é te deixar usando o MySQL e o PostgreSQL sem precisar instalar direto na sua máquina, mas sim através do Docker, em outro momento eu crio outro post para explicar mais detalhes, combinado?
 
@@ -76,7 +77,7 @@ Vamos entender os detalhes do comando acima:
 
 * -e MYSQL_ROOT_PASSWORD=root: as propriedades passadas com o -e são variáveis de ambiente passadas para o contêiner, nesse caso o contêiner do MySQL pode ser configurado com _MYSQL_ROOT_PASSWORD_ para trocar a senha do usuário root.
 
-* -d: serve para rodarmos o contêiner em background
+* -d: serve para iniciar o contêiner em background
 
 * mysql:5.6: o nome da imagem e versão. Repare que eu especifiquei a versão depois dos dois pontos, caso eu não informasse, seria baixado a última versão do MySQL disponível no Docker Hub.
 
@@ -94,7 +95,7 @@ Você verá algo como:
 
 ### Criando um contêiner do PostgreSQL
 
-Para finalizar esse post vamos criar um contêiner com o PostegreSQL, bem rápido e simples também.
+Para finalizar esse post vamos criar um contêiner com o PostgreSQL, bem rápido e simples também.
 
 ~~~
 $ docker run -p 5432:5432 --name postgres-projeto-a -e POSTGRES_USER=usuario -e POSTGRES_PASSWORD=senha -e POSTGRES_DB=instancia_banco_de_dados -d postgres:9.6.1
