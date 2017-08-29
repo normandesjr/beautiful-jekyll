@@ -117,7 +117,7 @@ Pronto! Sim, já temos um Postgres instalado e pronto para usar. Use a IDE de su
 
 Agora é bem provável que você esteja se perguntando? Mas como eu faço para parar o MySQL ou o Postgre?
 
-$ docker stop <nome do contêiner>
+$ docker stop _nome-do-contêiner_
 
 Agora vem um segredo... se você usar o _docker ps_ agora não irá ver nenhum contêiner listado, pois o _ps_ mostra apenas os contêiners iniciados, mas se passar a opção _-a_ ai sim você verá a lista de todos eles.
 
@@ -127,7 +127,7 @@ $ docker ps -a
 
 E para iniciar o contêiner novamente, use:
 
-$ docker start <nome do contêiner>
+$ docker start _nome-do-contêiner_
 
 Simples assim mesmo!
 
