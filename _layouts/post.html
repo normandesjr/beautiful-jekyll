@@ -12,11 +12,11 @@ layout: base
         {{ content }}
       </article>
 
+      {% include subscribe.html %}
+
       {% if page.author %}
         {% include {{ page.author }} %}
       {% endif %}
-
-      {% include subscribe.html %}
 
       {% if page.tags.size > 0 %}
         <div class="blog-tags">
