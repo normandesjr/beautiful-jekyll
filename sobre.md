@@ -4,7 +4,7 @@ title: Hibi Code
 subtitle: Um pouco da história
 ---
 
-Meu nome é Normandes Junior e sou líder técnico na [SoftBox](http://www.softbox.com.br/).
+Meu nome é Normandes Junior e sou engenheiro de software na [TQI](www.tqi.com.br/).
 
 <div style="margin: auto; width: 50%;">
   <figure>
